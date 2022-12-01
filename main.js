@@ -257,7 +257,7 @@ products.forEach( val => {
     <p>${val.description}</p>
     <h3>${val.category}</h3>
     <img src = "${val.image}">
-    <h4>${val.rating}</h4>
+    <h4>${'Rate ' + val.rating.rate + ' / ' + 'Count ' + val.rating.count}</h4>
     `
     wrapper.prepend(card)
 })
