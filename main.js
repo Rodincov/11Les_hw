@@ -248,17 +248,45 @@ let wrapper = document.createElement('div')
 wrapper.classList.add('wrapper')
 document.body.prepend(wrapper)
 
-products.forEach( val => {
-    let card = document.createElement('div')
-    card.classList.add('card')
-    card.innerHTML = `
-    <h3>${val.title}</h3>
-    <h3>${val.price}</h3>
-    <p>${val.description}</p>
-    <h3>${val.category}</h3>
-    <img src = "${val.image}">
-    <h4>${'Rate ' + val.rating.rate + ' / ' + 'Count ' + val.rating.count}</h4>
-    `
-    wrapper.prepend(card)
-})
+/// 1 sposob
 
+// products.forEach( val => {
+//     let card = document.createElement('div')
+//     card.classList.add('card')
+//     card.innerHTML = `
+//     <h3>${val.title}</h3>
+//     <h3>${val.price}</h3>
+//     <p>${val.description}</p>
+//     <h3>${val.category}</h3>
+//     <img src = "${val.image}">
+//     <h4>${'Rate ' + val.rating.rate + ' / ' + 'Count ' + val.rating.count}</h4>
+//     `
+//     wrapper.prepend(card)
+// })
+
+
+
+/// 2 sposob
+
+// products.forEach(val => {
+//   let card = document.createElement('div')
+//   card.classList.add('card')
+//   wrapper.prepend(card)
+//   let title = document.createElement('h3')  
+//   title.innerHTML = val.title
+//   card.prepend(title)
+//   let h3 = document.createElement('h3')  
+//   h3.innerHTML = val.price
+//   card.prepend(h3)
+//   let p = document.createElement('p')
+//   p.innerHTML = val.description
+//   card.prepend(p)
+//   let img = document.createElement('img')
+//   img.setAttribute('src', val.image)
+//   card.prepend(img)
+//   let h4 = document.createElement('h4')
+//   h4.innerHTML = 'Rate ' + val.rating.rate + ' / ' + 'Count ' + val.rating.count
+//   card.prepend(h4)
+//   wrapper.prepend(card)
+
+// })
